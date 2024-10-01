@@ -1,4 +1,3 @@
-
 package se.berkan.dice;
 // Paketdeklaration: Grupperar klasser i ett paket för bättre organisering och undviker namnkonflikter.
 
@@ -19,11 +18,8 @@ class Main {  // Detta är huvudklassen där spelet körs
         System.out.println("What's Player 2's name?");
         Player player2 = new Player(scanner.nextLine());
 
-        // Variabel för att hålla reda på vilken runda som pågår
-        int round = 1;
-
-        // Loop som kör spelet i 4 rundor
-        while (round <= 4) {
+        // For-loop som kör spelet i 4 rundor
+        for (int round = 1; round <= 4; round++) {
             // Väntar på att spelaren ska trycka Enter för att starta nästa runda
             System.out.println("Press Enter to start round " + round + "...");
             scanner.nextLine();  // Läser Enter-trycket från spelaren
@@ -38,9 +34,6 @@ class Main {  // Detta är huvudklassen där spelet körs
             // Spelare 2:s tur - ett tärningskast och poäng registreras
             int val2 = player2.Playersturn();
             System.out.println(player2.name + " rolled a " + val2);
-
-            // Öka rundräknaren för att fortsätta till nästa runda
-            round++;
         }
 
         // Efter 4 rundor, bestäms vinnaren genom att jämföra spelarnas poäng
