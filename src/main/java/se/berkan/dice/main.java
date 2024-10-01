@@ -20,8 +20,10 @@ class Main {  // Detta är huvudklassen där spelet körs
 
         // For-loop som kör spelet i 4 rundor,  Loopen körs så länge round är mindre än eller lika med 4. När round blir större än 4, slutar den.
         for (int round = 1; round <= 4; round++) {
+         
             // Väntar på att spelaren ska trycka Enter för att starta nästa runda
             System.out.println("Press Enter to start round " + round + "...");
+           
             scanner.nextLine();  // Läser Enter-trycket från spelaren
 
             // Visar aktuell runda
@@ -37,6 +39,7 @@ class Main {  // Detta är huvudklassen där spelet körs
         }
 
         // Efter 4 rundor, bestäms vinnaren genom att jämföra spelarnas poäng
+      
         if (player1.points == player2.points) {
             // Om båda spelarna har lika många poäng blir det oavgjort
             System.out.println("It's a tie!");
