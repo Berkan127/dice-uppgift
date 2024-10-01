@@ -18,7 +18,7 @@ class Main {  // Detta är huvudklassen där spelet körs
         System.out.println("What's Player 2's name?");
         Player player2 = new Player(scanner.nextLine());
 
-        // For-loop som kör spelet i 4 rundor
+        // For-loop som kör spelet i 4 rundor, round <= 4: Loopen körs så länge round är mindre än eller lika med 4. När round blir större än 4, slutar den.
         for (int round = 1; round <= 4; round++) {
             // Väntar på att spelaren ska trycka Enter för att starta nästa runda
             System.out.println("Press Enter to start round " + round + "...");
